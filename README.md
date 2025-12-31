@@ -1,11 +1,11 @@
-# 💰 Split Sheets
+# Split Sheets
 
 A flexible, dynamic bill-splitting script for Google Sheets. Perfect for roommates, couples, or groups who need to track shared expenses and settle up fairly.
 
 ![Google Apps Script](https://img.shields.io/badge/Google%20Apps%20Script-4285F4?logo=google&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
-## ✨ Features
+## Features
 
 - **Dynamic People Support** - Works with any number of people (2+)
 - **Three Split Types**:
@@ -17,7 +17,7 @@ A flexible, dynamic bill-splitting script for Google Sheets. Perfect for roommat
 - **Summary Row** - Shows who owes what at a glance
 - **Per-Row Breakdown** - See exactly how each expense is split
 
-## 📋 Setup
+## Setup
 
 ### 1. Create Your Google Sheet
 
@@ -35,7 +35,7 @@ Set up your spreadsheet with these columns:
 2. Go to **Extensions** → **Apps Script**
 3. Delete any existing code
 4. Copy and paste the contents of `Split-Sheets.js`
-5. Click **Save** (💾)
+5. Click **Save**
 6. Refresh your spreadsheet
 
 ### 3. Set Up Data Validation (Optional but Recommended)
@@ -50,7 +50,7 @@ For the **"How to split"** column (D):
 2. Go to **Data** → **Data validation**
 3. Set criteria to **List of items**: `Equally,Variably,Fixed`
 
-## 🎯 How to Use
+## How to Use
 
 ### Equal Splits
 1. Select **"Equally"** in the "How to split" column
@@ -70,7 +70,7 @@ For the **"How to split"** column (D):
 3. Enter one person's fixed amount
 4. The remainder auto-calculates for others
 
-## 📊 Example
+## Example
 
 | Description | Who Paid | Amount | How to split | Alice | Bob | Breakdown |
 |-------------|----------|--------|--------------|-------|-----|-----------|
@@ -80,13 +80,13 @@ For the **"How to split"** column (D):
 | Dinner | Bob | $75 | Fixed | $25 | $50 | Alice Pays: $25.00 |
 | **Due: 1st** | **Summary** | **$2,305** | | | | **Bob owes $1,085.00** |
 
-## 🔧 Custom Menu
+## Custom Menu
 
-After installation, a **"💰 Split Sheets"** menu appears in your spreadsheet:
+After installation, a **"Split Sheets"** menu appears in your spreadsheet:
 
 - **Recalculate** - Manually trigger a full recalculation
 
-## 📁 File Structure
+## File Structure
 
 ```
 Split-Sheets/
@@ -94,7 +94,7 @@ Split-Sheets/
 └── README.md          # This file
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 You can customize these constants at the top of the script:
 
@@ -106,7 +106,7 @@ var SPLIT_TYPE_COL = 4;     // Column D
 var FIRST_SPLITTER_COL = 5; // Column E (first person)
 ```
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Feel free to:
 
@@ -116,23 +116,19 @@ Contributions are welcome! Feel free to:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 💡 Tips
+## Tips
 
 - The script runs on every cell edit, so calculations are always current
 - Use the "Recalculate" menu option if something seems off
 - The summary row automatically positions itself after the last expense row
 - Works best with Chrome and the Google Sheets desktop app
 
-## 🐛 Known Limitations
+## Known Limitations
 
 - Requires Google Sheets (not compatible with Excel)
 - Checkbox state may not persist if you change split types frequently
 - Very large spreadsheets (1000+ rows) may experience slight delays
-
----
-
-Made with ❤️ for splitting bills fairly
